@@ -18,7 +18,7 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -35,11 +35,14 @@ export default function ThemeContextProvider({
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
 
+    console.log(localTheme);
+    
+
     if (localTheme) {
       setTheme(localTheme);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    } else {
       setTheme("dark");
-      document.documentElement.classList.add("dark");
+      window.localStorage.setItem("theme", "dark");
     }
   }, []);
 

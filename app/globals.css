@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --line-color: #e5e7eb;
-}
-
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
+  scroll-behavior: smooth;
+}
+
+html {
+  --line-color: #e5e7eb;
+  scroll-behavior: smooth;
 }
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
