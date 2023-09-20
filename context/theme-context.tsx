@@ -34,14 +34,13 @@ export default function ThemeContextProvider({
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
-    console.log(localTheme);
-    
-
+  
     if (localTheme) {
       setTheme(localTheme);
+      localTheme === "dark" && document.documentElement.classList.add("dark");
     } else {
       setTheme("dark");
+      document.documentElement.classList.add("dark");
       window.localStorage.setItem("theme", "dark");
     }
   }, []);
