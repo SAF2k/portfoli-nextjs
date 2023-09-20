@@ -1,11 +1,16 @@
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { LuCodesandbox, LuGraduationCap } from "react-icons/lu";
 import { createElement } from "react";
 
-import wordanalyticsImg from "@/public/wordanalytics.png";
-import rmtdevImg from "@/public/rmtdev.png";
+
 import githubclone from "@/public/githubclone.png";
+import ecomadmin from "@/public/ecomadmin.png";
+import ecomsite from "@/public/ecomsite.png";
+import codesandbox from "@/public/codesandboxclone.png";
+import scrollanimation from "@/public/scrollanimation.png";
+import carbook from "@/public/carbook.png";
+
 
 export const links = [
   {
@@ -36,12 +41,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated BCA",
+    location: "Karnataka, IN",
     description:
       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
     icon: createElement(LuGraduationCap),
-    date: "2019",
+    date: "2023",
   },
   {
     title: "Front-End Developer",
@@ -67,23 +72,44 @@ export const projectsData = [
   {
     title: "GitHub landing Clone",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "This is a clone of the GitHub landing page. It's built with Next.js and Tailwind. It's fully responsive and has a dark mode.",
+    tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
     imageUrl: githubclone,
   },
   {
-    title: "rmtDev",
+    title: "CodeSandBox Clone",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "This is a clone of the CodeSandBox landing page. It's built with Next.js and Tailwind. It's fully responsive and has a dark mode.",
+    tags: ["React", "Next.js", "Framer Motion", "Tailwind"],
+    imageUrl: codesandbox,
   },
   {
-    title: "Word Analytics",
+    title: "Car Rental Site",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "This is a Car Rental Site. It's built with Next.js and Tailwind. It's fully responsive, It uses RapidAPI to fetch data.",
+    tags: ["React", "Next.js", "RapidAPI", "Tailwind"],
+    imageUrl: carbook,
+  },
+  {
+    title: "Scroll Animation Site",
+    description:
+      "This is a clone of the CodeSandBox landing page. It's built with Next.js and Tailwind. It's fully responsive and has a dark mode.",
+    tags: ["React", "Next.js", "Sass", "Framer Motion"],
+    imageUrl: scrollanimation,
+  },
+  {
+    title: "E-commerce Admin",
+    description:
+      "A private web app for managing multiple e-commerce site. It has a dashboard, product management, order management and user management.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+    imageUrl: ecomadmin,
+  },
+  {
+    title: "E-commerce Site",
+    description:
+      "A private e-commerce site. It has a product page, cart page, checkout page and order page. It's fully responsive and has a dark mode. It's built with Next.js, Tailwind and MySQL.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: ecomsite,
   },
 ] as const;
 
